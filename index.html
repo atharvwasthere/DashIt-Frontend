@@ -7,18 +7,122 @@
     <meta name="description" content="Track customers, orders, and revenue in real-time. Just log in and see everything in one dashboard." />
     <meta name="author" content="Dashit" />
 
+    <!-- Open Graph / Social -->
     <meta property="og:title" content="Dashit — Your Stats, Simplified" />
     <meta property="og:description" content="Track customers, orders, and revenue in real-time. Just log in and see everything in one dashboard." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:image" content="/hero.png" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:site" content="@Dashit" />
+    <meta name="twitter:image" content="/hero.png" />
+
+    <!-- Favicon / touch -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+
+    <style>
+      :root{
+        --bg-1:#061226;
+        --bg-2:#05282e;
+        --card:#0b1220;
+        --muted:#9fbfb0;
+        --accent:#22c55e;
+        --glass: rgba(255,255,255,0.03);
+      }
+      html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#e6eef8;background:linear-gradient(180deg,var(--bg-1) 0%, var(--bg-2) 100%);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+      .wrap{max-width:1100px;margin:36px auto;padding:28px}
+      header{display:flex;align-items:center;gap:16px}
+      .logo{height:56px;width:56px;object-fit:contain;border-radius:10px;background:linear-gradient(135deg,rgba(34,197,94,0.14), rgba(16,185,129,0.06));padding:6px;box-shadow:0 6px 26px rgba(2,6,23,0.6)}
+      .title{font-size:1.5rem;font-weight:700;margin:0}
+      .tag{color:var(--muted);margin-top:6px;font-size:0.95rem}
+      .hero{margin-top:22px;border-radius:12px;overflow:hidden;box-shadow:0 18px 50px rgba(2,6,23,0.65);border:1px solid rgba(255,255,255,0.03)}
+      .hero img{display:block;width:100%;height:auto}
+      .content{display:grid;grid-template-columns:1fr 420px;gap:20px;margin-top:22px;align-items:start}
+      .card{background:var(--card);border-radius:12px;padding:18px;border:1px solid var(--glass);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+      .preview img{width:100%;border-radius:8px;display:block}
+      .cta{display:inline-block;background:linear-gradient(90deg,var(--accent),#16a34a);color:#061226;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;box-shadow:0 10px 30px rgba(34,197,94,0.12);margin-top:12px}
+      .meta{color:var(--muted);font-size:0.9rem;margin-top:8px}
+      footer{margin-top:36px;color:#9fbfb0;text-align:center;font-size:0.85rem}
+      @media (max-width:900px){
+        .content{grid-template-columns:1fr;gap:14px}
+        .logo{height:48px;width:48px}
+      }
+    </style>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div class="wrap">
+      <header>
+        <img src="/logo.png" alt="Dashit logo" class="logo" />
+        <div>
+          <h1 class="title">Dashit — Your Stats, Simplified</h1>
+          <div class="tag">Track customers, orders, and revenue in real-time. Login to see everything in one place.</div>
+        </div>
+      </header>
+
+      <!-- Hero / social image -->
+      <div class="hero" aria-hidden="true">
+        <img src="/hero.png" alt="Dashit hero image — analytics overview" />
+      </div>
+
+      <div class="content">
+        <!-- Main column: short pitch + CTA -->
+        <div>
+          <div class="card">
+            <h2 style="margin:0 0 8px 0">One dashboard for every merchant</h2>
+            <p class="meta">Dashit connects to your Shopify store, syncs customers, orders, and products, and surfaces the metrics you actually care about — fast and private.</p>
+
+            <a class="cta" href="/auth/google">Sign in with Google</a>
+
+            <div style="margin-top:14px;color:var(--muted);font-size:0.9rem">
+              No passwords. OAuth + JWT. Multi-store support.
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:14px">
+            <h3 style="margin:0 0 8px 0">Quick preview</h3>
+            <p class="meta">Here&apos;s a snapshot of a sample merchant dashboard — click to view full size.</p>
+            <div style="margin-top:12px" class="preview">
+              <a href="/Dashboard.png" target="_blank" rel="noopener">
+                <img src="/Dashboard.png" alt="Full dashboard preview — Dashit" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side column: small info card -->
+        <aside>
+          <div class="card">
+            <h4 style="margin:0 0 6px 0">Why Dashit?</h4>
+            <ul style="margin:8px 0 0 18px;color:var(--muted);line-height:1.6">
+              <li>Fresh syncs — near real-time metrics</li>
+              <li>Redis caching to reduce API calls</li>
+              <li>Multi-tenant isolation for multiple stores</li>
+              <li>Secure Google sign-in (OAuth + JWT)</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin-top:14px">
+            <h4 style="margin:0 0 6px 0">Share</h4>
+            <p class="meta">Use the hero image as your social card or the dashboard preview as a product screenshot.</p>
+            <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+              <a href="/hero.png" class="cta" style="padding:8px 12px;font-size:0.9rem" download>Download Hero</a>
+              <a href="/Dashboard.png" class="cta" style="padding:8px 12px;font-size:0.9rem;background:linear-gradient(90deg,#64748b,#94a3b8)" download>Download Dashboard</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <footer>
+        © <span id="year"></span> Dashit — Built with care for merchants and curious devs.
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
