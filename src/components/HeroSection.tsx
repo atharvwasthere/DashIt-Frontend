@@ -23,10 +23,15 @@ const HeroSection = () => {
       <div className="container text-center">
         <div className="max-w-4xl mx-auto">
           {/* Main Headline */}
-          <h1 className="fade-in-up text-5xl md:text-7xl font-bold text-foreground mb-6 tracking-tight">
-            Dashit — Your Stats,{" "}
-            <span className="text-accent">Simplified</span>
-          </h1>
+<h1 className="fade-in-up text-5xl md:text-7xl font-bold text-foreground mb-6 tracking-tight">
+  <span className="underline decoration-emerald-400 decoration-4 underline-offset-4">
+    Dashit{"  "}
+  </span>
+  <br />
+  <span className="text-Black text-4xl">Your Stats,{" "}</span>
+  <span className="text-accent text-4xl">Simplified</span>
+</h1>
+
           
           {/* Subtext */}
           <p className="fade-in-up-delay text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
